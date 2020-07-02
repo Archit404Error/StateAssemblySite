@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <link type = "text/css" rel = "stylesheet" href = "animate.css">
+    <style>
+      h1{
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-size: 6vh;
+      }
+      h2{
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-size: 3vh;
+      }
+      h3{
+        font-size: 2vh;
+      }
+      .landing{
+        font-size: 10vh;
+      }
+      .outer {
+        height: 100vh;
+        display: flex;
+      }
+      .inner {
+        margin: auto;
+      }
+      .info-section{
+        text-align: left;
+        display: inline-block;
+        background-color: white;
+        color: #666666;
+        border-radius: 5px;
+        transition-duration: .5s;
+      }
+      .info-section:hover{
+        background-color: #3495eb;
+        color: white;
+      }
+      .alternate-info-section{
+        background-color: #3495eb;
+        color: white;
+        display: inline-block;
+        padding: 5%;
+      }
+      .tiny{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3vh;
+        color: #3495eb;
+      }
+      .reading-text{
+        color: #666666;
+        line-height: 2;
+        font-size: 3vh;
+      }
+      .main-navigation {
+        box-shadow: 0 2px 2px -2px rgba(0,0,0,.5);
+        position: fixed;
+        background-color: #3495eb;
+        border-radius: 0px;
+        width: 100vw;
+        z-index: 999;
+      }
+      .main-navigation a{
+        color: #c2daff;
+      }
+      .main-navigation a:hover{
+        color: black;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar main-navigation">
+      <a style = "color: white;" class="navbar-brand" href="#">MAS State Assembly</a>
+      <ul class="nav navbar-nav">
+        <li><a href="#home" style = "">Home</a></li>
+        <li><a href="#pillars">About</a></li>
+        <li><a href="#statistics">Stats</a></li>
+        <li><a href="#goals">Goals</a></li>
+      </ul>
+    </nav>
+
+    <div id = "home" class = "container h-100 d-flex text-center outer" style = "background-image: url('redone.jpg'); background-size: cover; width: 100vw; height: 100vh;">
+      <div class = "my-auto inner">
+        <h1 class = "landing animated wow fadeInLeft" style = "color:  #3495eb;">The MAS State Assembly</h1>
+        <h3 class = "animated wow fadeInRight" style = "color: white; font-size: 3vh;">Working to create a better Mid-Atlantic State</h3>
+      </div>
+    </div>
+    <div id = "pillars" class = "container text-center" style = "display: inline-block; background-color: #fafafa; width: 100vw;">
+      <div class = "row">
+        <div style = "height: 5vh"></div>
+        <h1 class = "animated wow fadeInDown">The 3 Pillars of Our State Assembly</h1>
+        <div style = "height: 5vh"></div>
+        <div class = "col-md-2"></div>
+        <div class = "col-md-2 info-section animated wow fadeInUp">
+          <h2>The Speaker of the State Assembly</h2>
+          <h3 style = "line-height: 2;">Our first ever Speaker is Archit Mehta. The role of the Speaker is to oversee the daily operations of the State Assembly itself.
+          As such, Archit ensures that the State Assembly functions properly, and sets long term goals when it comes to fixing
+        the transparecny, efficiency, and effectiveness of the State Assembly as a whole.</h3>
+        </div>
+        <div class = "col-md-1"></div>
+        <div class = "col-md-2 info-section animated wow fadeInUp" data-wow-delay = "200ms">
+          <h2>Speaker Cabinet</h2>
+          <h3 style = "line-height: 2;">Speaker cabinet is a group of hand picked JSA memebers that are dedicated to the improvement and betterment
+          of the State Assembly as a whole. Together, State Assembly cabinet works to execute and accomplish the tasks that the
+          Speaker has set in front of them, in order to create a better and more cohesive State Assembly.</h3>
+        </div>
+        <div class = "col-md-1"></div>
+        <div class = "col-md-2 info-section animated wow fadeInUp" data-wow-delay = "400ms">
+          <h2>State Assembly Representatives</h2>
+          <h3 style = "line-height: 2;">State Assembly Representatives(SARs) make up the backbone of the State Assembly. Elected by each chapter in the MAS,
+          every SAR must attend all State Assembly meetings to write, debate, and vote on the bills presented at each meeting.
+          SARs provide a voice to their chapter by voting on bills presented at meetings.</h3>
+        </div>
+        <div class = "col-md-2"></div>
+      </div>
+      <div style = "height: 5vh;"></div>
+      <div class = "row">
+        <div class = "col-md-2"></div>
+        <div class = "col-md-8 info-section animated wow fadeInUp" data-wow-delay = "800ms">
+          <h2>Together</h2>
+          <h3 style = "line-height: 2;">Together, Lorem Ipsum Dolor, add more text here later, but for now this dummy text will suffice.
+          This goal of this box is only to create a better aesthetic for this section of the website.</h3>
+        </div>
+        <div class = "col-md-2"></div>
+      </div>
+      <div style = "height: 5vh;"></div>
+    </div>
+    <div id = "statistics" class = "containter alternate-info-section text-center" style = "width: 100vw;">
+      <h1 class = "animated wow fadeInUp" style = "font-size: 4vh; color: #c2daff;">About the State Assembly</h1>
+      <div class = "row">
+        <div class = "col-md-4 animated wow fadeInUp" data-wow-dely = "200ms">
+          <h1 style = "color: white;">1700</h1>
+          <h3 style = "font-size: 3vh; color: #c2daff;">Bills Passed</h3>
+        </div>
+        <div class = "col-md-4 animated wow fadeInUp" data-wow-delay = "400ms">
+          <h1 style = "color: white;">200</h1>
+          <h3 style = "font-size: 3vh; color: #c2daff;">Bills Passed</h3>
+        </div>
+        <div class = "col-md-4 animated wow fadeInUp" data-wow-delay = "600ms">
+          <h1 style = "color: white;">200</h1>
+          <h3 style = "font-size: 3vh; color: #c2daff;">Bills Passed</h3>
+        </div>
+        <div style = "height: 20vh;"></div>
+        <h3 style = "font-size: 3vh; color: #c2daff;">[More info here later to gass up the site and State Assembly]</h3>
+      </div>
+    </div>
+    <div style = "height: 4vh"></div>
+    <div id = "goals" class = "container" style = "width: 100vw; display: inline-block; min-height: 100vh">
+      <div class = "row">
+        <div class = "col-md-2"></div>
+        <div class = "col-md-8">
+          <h3 class = "tiny animated wow fadeInDown">How We're Bridging the Gap.</h3>
+          <h1 class = "animated wow fadeInDown" data-wow-delay = "400ms">The SAR Outreach Form</h1>
+          <h3 class = "reading-text animated wow fadeInUp" data-wow-delay = "800ms">
+            We're proud to announce our newest outreach effort: the SAR Outreach Form. Our goal with this form is to
+            empower common JSAers and give them the chance to have their voices heard. There are hundreds of problems
+            within the MAS, and oftentimes SARs don't experience these problems firsthand, and, hence, don't think to
+            write bills on these topics.
+          </h3>
+          <h3 class = "reading-text animated wow fadeInUp" data-wow-delay = "1000ms">
+            Hence, we've created the SAR Outreach form. The form allows for everyday JSAers to submit their issues
+            directly to the people that are writing legislation to fix issues within the MAS - the SARs. All responses
+            will be viewable to the Speaker of the State Assembly, who will compile a list of the most pressing problems
+            within the MAS and allow SARs to view this list.
+          </h3>
+          <h3 class = "reading-text animated wow fadeInUp" data-wow-delay = "1200ms">
+            Our hope for the SAR outreach form is to not only motivate SARs to write more bills by giving them ideas
+            to help them get started, but also to solve the problems that <span style = "color: #3495eb">all of you</span>
+            everyday JSAers face. The State Assembly was created to solve the problems within MAS JSA, and we hope this form
+            will help it to do that.
+          </h3>
+        </div>
+        <div class = "col-md-2"></div>
+      </div>
+      <div style = "height: 5vh;"></div>
+      <div class = "row">
+        <div class = "col-md-2"></div>
+        <div class = "col-md-8">
+          <h3 class = "tiny animated wow fadeInDown">How We're Increasing Communication.</h3>
+          <h1 class = "animated wow fadeInDown" data-wow-delay = "400ms">Stronger Resources & Publicity</h1>
+          <h3 class = "reading-text animated wow fadeInUp" data-wow-delay = "800ms">
+            This year, the State Assembly has completely revamped its publicity system, because we found it was almost
+            completely ineffective in previous years. In fact, most JSAers don't realize that <u>
+            contrary to popular belief, the State Assembly is open to everyone, not just SARs.</u>
+          </h3>
+          <h3 class = "reading-text animated wow fadeInUp" data-wow-delay = "1000ms">
+            Hence, on this site we have provided several resources, from the <b>State Assembly 101 Guide</b> for new SARs and
+            new JSAers, to the <b>FEC Handbook</b> for rules about elections, to even the <b>archives</b> of previous bills.
+            Our goal is to provide a level of communication and openness about the State Assembly that has been completely
+            unseen in previous years.
+          </h3>
+          <h3 class = "reading-text animated wow fadeInUp" data-wow-delay = "1200ms">
+            Finally, this year we will publish <u>comprehenseive meeting minutes for every State Assembly meeting</u>, so
+            for new members looking to get involved or SARs that couldn't attend conventions, all the details of the meeting
+            will still be easily accessible online.
+          </h3>
+        </div>
+        <div class = "col-md-2"></div>
+      </div>
+      <div style = "height: 5vh;"></div>
+      <div class = "row">
+        <div class = "col-md-2"></div>
+        <div class = "col-md-8">
+          <h3 class = "tiny animated wow fadeInDown">Our Vision.</h3>
+          <h1 class = "animated wow fadeInDown" data-wow-delay = "400ms">Plans for the Future</h1>
+          <h3 class = "reading-text animated wow fadeInUp" data-wow-delay = "800ms">
+            Our first goal this year is to move all meetings that can't be held in person to an online format.
+            Given the unpredictability of the COVID-19 pandemic, we want to ensure that whether or not an in person event
+            is possible, we can still conduct State Assembly meetings.
+          </h3>
+          <h3 class = "reading-text animated wow fadeInUp" data-wow-delay = "1000ms">
+            Next, we plan on yeet yeet yeet, add here later
+          </h3>
+        </div>
+        <div class = "col-md-2"></div>
+      </div>
+    </div>
+  </body>
+</html>
