@@ -12,8 +12,9 @@ The site has the following features, all explained further in depth below:
 # Feature 1: Information
 I learned a lot about front-end development while building out the site, utilizing bootstrap and CSS to create an attractive site capable of distributing information in a concise manner to any confused JSAers.
 
-Here is a screenshot of the site's landing:
+Here are screenshots of the site's landing:
 <img src = images/landing_1.png>
+
 <img src = images/landing_2.png>
 
 # Feature 2: Outreach
