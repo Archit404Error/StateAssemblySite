@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <link type = "text/css" rel = "stylesheet" href = "animate.css">
+    <link type = "text/css" rel = "stylesheet" href = "style.css">
+    <script>
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar main-navigation">
+      <a style = "color: white;" class="navbar-brand" href="#">MAS State Assembly</a>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="billcreate.html">Create Bill</a></li>
+        <li><a href="outreach.php">Outreach Form</a></li>
+      </ul>
+    </nav>
+    <div style = "height: 45vh;">
+    </div>
+    <center><h1>Whoops! The Page You're Looking For Wasn't Found!</h1></center>
+    <center><h3>We encountered a <b>404: Not Found Error</b> while loading this page</h3></center>
+  </body>
+</html>

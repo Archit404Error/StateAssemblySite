@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <link type = "text/css" rel = "stylesheet" href = "animate.css">
+    <link type = "text/css" rel = "stylesheet" href = "style.css">
+    <script>
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar main-navigation">
+      <a style = "color: white;" class="navbar-brand" href="#">MAS State Assembly</a>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="billcreate.html">Create Bill</a></li>
+        <li><a href="outreach.php">Outreach Form</a></li>
+      </ul>
+    </nav>
+    <div style = "height: 5vh;">
+    </div>
+    <div id="formArea" style="background-color: #fafafa; width: 100vw; display: inline-block;">
+      <center><h1>Bill Creation Tool</h1></center>
+      <div class = "row">
+        <div class = "col-md-3"></div>
+        <center><h3 class = "col-md-6" style = "color: #666666;">This tool will automatically format and create a bill based on your specifications!</h3></center>
+        <div class = "col-md-3"></div>
+      </div>
+      <form method="POST" action = "/PHPRtfLite-1.3.2/samples/billformat.php" style = "padding: 2vw;">
+        <div class = "form-group col-md-6">
+          <label for = "name">Bill Title</label>
+          <input required type = "text" class = "form-control" name="name" id = "name" placeholder="Ex: A Bill to Reform the State Assembly's Efficiency">
+        </div>
+        <div class = "form-group col-md-6">
+          <label for = "sponsor">Sponsors</label>
+          <input required type = "text" class = "form-control" name="sponsor" id = "sponsor" placeholder = "Write the Sponsors' names, each separated by a comma Ex: Archit Mehta, Parth Harish">
+        </div>
+        <div class = "form-group col-md-12">
+          <label for = "context">Context</label>
+          <input required type = "text" class = "form-control" name="context" id = "context" placeholder = "Write a few sentences explaining the problem, give context to the issue">
+        </div>
+        <div class = "form-group col-md-12">
+          <label for = "whereas">Whereas Clauses</label>
+          <textarea required class = "form-control" id = "whereas" name="whereas" rows = "3" placeholder= "Write reasons why this bill should be passed. Press enter after each reason."></textarea>
+        </div>
+        <div class = "form-group col-md-12">
+          <label for = "sections">Sections</label>
+          <textarea required class = "form-control" id = "sections" name="sections" rows = "5" placeholder= "Write each section, ex. Section[#]: [bill text], indent each subsection. One indent is equal to 4 spaces. Write each section on a new line."></textarea>
+        </div>
+        <div class = "form-group col-md-12">
+          <button type = "submit" class = "btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
